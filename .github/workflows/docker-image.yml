@@ -25,14 +25,14 @@ jobs:
       - name: Build and push backend image
         uses: docker/build-push-action@v6
         with:
-          context: ./DEVOPS-FULLSTACK-PROJECT/springbootbackend
+          context: ./springbootbackend
           push: true
           tags: ${{ secrets.DOCKER_USER }}/taskdockeraws-backend:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v6
         with:
-          context: ./DEVOPS-FULLSTACK-PROJECT/reactfrontend
+          context: ./reactfrontend
           push: true
           tags: ${{ secrets.DOCKER_USER }}/taskdockeraws-frontend:latest
 
